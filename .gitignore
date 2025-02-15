@@ -1,6 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.*
@@ -8,55 +6,82 @@
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
+!.yarn/sdks
 !.yarn/versions
 
-# testing
+# Testing
 /coverage
 /.nyc_output
 /cypress/videos/
 /cypress/screenshots/
 /playwright-report/
 /test-results/
+*.lcov
 
-# next.js
+# Next.js
 /.next/
 /out/
 .next-env*
+next-env.d.ts
 
-# production
+# Production
 /build
 /dist
 /.build/
 
-# misc
-.DS_Store
-*.pem
-.idea/
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-*.log
-*.swp
+# Environment Variables
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env
+.env*.local
 
-# debug
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+debug.log
 
-# vercel
-.vercel
+# IDEs and editors
+/.idea
+/.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# typescript
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Cache and build files
+.cache/
+.eslintcache
+.stylelintcache
 *.tsbuildinfo
-next-env.d.ts
+
+# Vercel
+.vercel
 
 # PWA files
 **/public/sw.js
@@ -68,17 +93,44 @@ next-env.d.ts
 
 # Storybook
 /storybook-static
+/storybook-docs
 
-# Cache
-.cache/
+# Coverage directory
+/coverage
+/.nyc_output
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
 .eslintcache
+
+# Optional stylelint cache
 .stylelintcache
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Local Netlify folder
+.netlify
+
+# TypeScript
+*.tsbuildinfo
+
+# Images (if needed)
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.ico
+# *.svg
+
+# Logs
+logs
+*.log
