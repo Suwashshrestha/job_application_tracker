@@ -15,12 +15,12 @@ export default function Register() {
     e.preventDefault();
     try {
       await register(email, password);
-      router.push('/dashboard');
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        setError(`Failed to login. Please check your credentials.`);
+      router.push('/dashboard'); 
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
       } else {
-        setError('An unknown error occurred.');
+        setError('An unknown error occurred.'); 
       }
     }
   };
@@ -79,7 +79,7 @@ export default function Register() {
           </div>
           
           {error && (
-            <div className="rounded-md bg-red-50 p-4">
+            <div className="rounded-md bg-red-50 p-4 mt-4">
               <p className="text-sm text-red-700">{error}</p>
             </div>
           )}

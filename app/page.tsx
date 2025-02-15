@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import { FaBriefcase } from 'react-icons/fa'; // Changed to briefcase icon
+import { FaBriefcase } from 'react-icons/fa'; 
 import { useState } from 'react';
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
               <Link href="/" className="text-gray-700 hover:text-indigo-600 px-3 py-2 transition-colors duration-200">
                 Home
               </Link>
-              <Link href="/menu" className="text-gray-700 hover:text-indigo-600 px-3 py-2 transition-colors duration-200">
+              <Link href="/dashboard" className="text-gray-700 hover:text-indigo-600 px-3 py-2 transition-colors duration-200">
                 Dashboard
               </Link>
               <Link href="/about" className="text-gray-700 hover:text-indigo-600 px-3 py-2 transition-colors duration-200">
@@ -69,7 +69,7 @@ export default function Home() {
                 Home
               </Link>
               <Link
-                href="/menu"
+                href="/dashboard"
                 className="block text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 px-3 py-2 rounded-md text-base font-medium"
               >
                 Dashboard
