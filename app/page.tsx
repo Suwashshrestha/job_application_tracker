@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import JobsPage  from "./components/JobsPage"
 
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <JobsPage />
 
           {/* Features Section */}
           <div className="mt-24 grid md:grid-cols-3 gap-8 px-4">
