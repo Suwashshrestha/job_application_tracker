@@ -1,7 +1,17 @@
 import { collection, addDoc } from "firebase/firestore";
 import { auth, db } from "./firebase";
 
-export const addJob = async (jobData) => {
+// Define the type for job data
+interface JobData {
+  company: string;
+  position: string;
+  status: string;
+  deadline: string;
+  notes: string;
+}
+
+// Function to add a job to the Firestore database
+export const addJob = async (jobData: JobData): Promise<boolean | null> => {
   const user = auth.currentUser;
   if (!user) {
     console.log("User not authenticated");
@@ -16,7 +26,7 @@ export const addJob = async (jobData) => {
       status: jobData.status,
       deadline: jobData.deadline,
       notes: jobData.notes,
-      createdAt: new Date()
+      createdAt: new Date(),
     });
     console.log("Job added successfully");
     return true;
